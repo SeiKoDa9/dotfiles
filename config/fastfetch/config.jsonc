@@ -1,0 +1,204 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "/home/enriquec9/Pictures/fetchlumi.gif",
+    "height": 15,
+    "width": 31,
+    "padding": {
+      "top": 5,
+      "right": 1
+    }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys": "cyan",
+      "title": "light_magenta"
+    },
+    "brightColor": true,
+    "key": {
+      "width": 18
+    },
+    "bar": {
+      "width": 14,
+      "char": {
+        "elapsed": "█",
+        "total": "░"
+      }
+    },
+    "percent": {
+      "type": 3
+    }
+  },
+  "modules": [
+    // --- HEADER ---
+    {
+      "type": "custom",
+      "format": "╭─────────────── PC ─────────────────────",
+      "outputColor": "light_magenta"
+    },
+    {
+      "type": "title",
+      "key": " 󰟷 User",
+      "keyColor": "light_magenta",
+      "format": "{user-name}"
+    },
+    {
+      "type": "title",
+      "key": " 󰌢 Host",
+      "keyColor": "light_magenta",
+      "format": "{host-name}"
+    },
+
+    // --- SOFTWARE ---
+    {
+      "type": "custom",
+      "format": "├─────────────── Software ───────────────",
+      "outputColor": "cyan"
+    },
+    {
+      "type": "os",
+      "key": " 󰏤 OS"
+    },
+    {
+      "type": "kernel",
+      "key": " 󰌽 Kernel"
+    },
+    {
+      "type": "uptime",
+      "key": " 󰥔 Uptime"
+    },
+//    {
+//      "type": "packages",
+//      "key": " 󰏖 Packages",
+//      "format": "{all} (pacman: {pacman}, flatpak: {flatpak-all})"
+//    },
+//    {
+//      "type": "command",
+//      "key": " 󰏖 AUR",
+//      "keyColor": "cyan",
+//      "text": "pacman -Qm | wc -l"
+//    },
+    {
+      "type": "shell",
+      "key": " 󰟤 Shell"
+    },
+    {
+      "type": "de",
+      "key": " 󰍹 Desktop"
+    },
+    {
+      "type": "wm",
+      "key": " 󰖩 WM"
+    },
+    {
+      "type": "terminal",
+      "key": "  Terminal"
+    },
+
+    // --- HARDWARE ---
+    {
+      "type": "custom",
+      "format": "├─────────────── Hardware ───────────────",
+      "outputColor": "light_magenta"
+    },
+    {
+      "type": "cpu",
+      "key": " 󰻠 CPU",
+      "keyColor": "light_magenta",
+      "format": "{name} ({cores-physical}C/{cores-logical}T) @ {freq-max}"
+    },
+    
+    {
+      "type": "gpu",
+      "key": " 󰢮 GPU",
+      "keyColor": "light_magenta",
+    },
+    {
+      "type": "memory",
+      "key": " 󰍛 RAM",
+      "keyColor": "light_magenta",
+      "format": "{used} / {total} ({percentage})"
+    },
+//    {
+//      "type": "swap",
+//      "key": " 󰓡 Swap",
+//      "keyColor": "light_magenta",
+//      "format": "{used} / {total} ({percentage})"
+//    },
+
+    // --- STORAGE ---
+    {
+      "type": "disk",
+      "key": " 󰋊 System",
+      "keyColor": "light_magenta",
+      "folders": "/",
+      "format": "{size-used} / {size-total} ({size-percentage}%) [{filesystem}] {size-percentage-bar}"
+    },
+    {
+      "type": "disk",
+      "key": " 󰋊 SSD_01",
+      "keyColor": "light_magenta",
+      "folders": "/mnt/oldssd",
+      "format": "{size-used} / {size-total} ({size-percentage}%) [{filesystem}] {size-percentage-bar}"
+    },
+    {
+      "type": "disk",
+      "key": " 󰋊 HDD_01",
+      "keyColor": "light_magenta",
+      "folders": "/mnt/oldhdd",
+      "format": "{size-used} / {size-total} ({size-percentage}%) [{filesystem}] {size-percentage-bar}"
+    },
+
+    // --- MISC ---
+    {
+      "type": "custom",
+      "format": "├ ─ ─ ─ ─ ─ ─",
+      "outputColor": "blue"
+    },
+    {
+      "type": "display",
+      "key": " 󰍹 Display",
+      "keyColor": "blue"
+    },
+    
+//    {
+//      "type": "localip",
+//      "key": " 󰩟 Local IP",
+//      "keyColor": "blue",
+//      "compact": true,
+//      "showIpv4": true,
+//      "showIpv6": false,
+//      "defaultRouteOnly": true
+//    },
+
+    // --- FOOTER ---
+    {
+      "type": "custom",
+      "format": "├─────────────── Customization ──────────",
+      "outputColor": "light_magenta"
+    },
+    {
+      "type": "cursor",
+      "key": " 󰇀 Cursor",
+      "keyColor": "light_magenta"
+    },
+    {
+      "type": "terminalfont",
+      "key": " 󰛖 Font",
+      "keyColor": "light_magenta"
+    },
+    {
+      "type": "colors",
+      "key": " 󰸱 Palette",
+      "keyColor": "light_magenta",
+      "symbol": "circle"
+    },
+    {
+      "type": "custom",
+      "format": "╰──────────────────────────────",
+      "outputColor": "light_magenta"
+    }
+  ]
+}
