@@ -41,12 +41,12 @@ binds {
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: kitty" { spawn-sh "kitty"; }
     // MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
     // MOD+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi"; }
-    MOD+B                               hotkey-overlay-title="Open Browser: vivaldi" { spawn-sh "vivaldi"; }
+    MOD+B                               hotkey-overlay-title="Open Browser: zen-browser" { spawn-sh "zen-browser"; }
     MOD+ALT+L                           hotkey-overlay-title="Lock Screen: swaylock" { spawn-sh "swaylock"; }
     
     // Please choose your own file manager
-    MOD+E                             hotkey-overlay-title="File Manager: Nautilus" { spawn-sh "nautilus"; }
-
+       MOD+ALT+E                           hotkey-overlay-title="File Manager: dolphin" { spawn-sh "dolphin"; }
+       MOD+E                               hotkey-overlay-title="File Manager: Yazi (Kitty)" { spawn-sh "kitty yazi"; }
     // ─── Audio Controls ───
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -167,7 +167,7 @@ binds {
    CTRL+ALT+S                          {spawn "qs" "-c" "noctalia-shell" "ipc" "call" "settings"  "toggle";}
    CTRL+ALT+W                          {spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper"  "toggle";}
    CTRL+ALT+M                          {spawn "qs" "-c" "noctalia-shell" "ipc" "call" "darkMode"  "toggle";}
-
+   // CTRL+ALT+V                          {spawn "qs" "-c" "noctalia-shell" "ipc" "call" "clip"  "toggle";}
    MOD+SPACE                           {spawn "qs" "-c" "noctalia-shell" "ipc" "call" "launcher"  "toggle";}
 }
 
@@ -186,6 +186,8 @@ binds {
     layout {
         gaps 8 // Gap between windows
         center-focused-column "never" // Don’t auto-center focused column
+
+        
 
         preset-column-widths {
             proportion 0.33333
@@ -206,7 +208,9 @@ binds {
             color "#0007"
         }
 
-        struts {}
+        struts {
+        top -20
+        }
     }
 
 // ────────────── Animation Settings ──────────────
@@ -248,7 +252,7 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
     window-rule {
-        match app-id=r#"vivaldi$"# title="^Picture-in-Picture$"
+        match app-id=r#"zen-browser$"# title="^Picture-in-Picture$"
         open-floating true
     }
 
